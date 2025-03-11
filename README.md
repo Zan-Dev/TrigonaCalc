@@ -50,13 +50,13 @@ Secara default, aplikasi akan berjalan di **http://127.0.0.1:5000/**.
 ## 📁 Struktur Proyek
 ```
 /project-folder
-│── /src
-|   |── /static
-|   |   |── styles.css
-|   |── /templates
-|   |   |── index.html
-|   │── app.py
-└── README.md
+│──  /src
+|  |──  /static
+|  |    |──  styles.css
+|  |──  /templates
+|  |    |──  index.html
+|  │──  app.py
+└──  README.md
 ```
 
 ## 🛠 Teknologi yang Digunakan
