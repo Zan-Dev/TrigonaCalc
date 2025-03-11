@@ -1,0 +1,75 @@
+body { 
+    font-family: 'Courier New', Courier, monospace;
+    /* font-family: 'IBM Plex Sans', sans-serif; */
+    text-align: center; 
+    padding: 20px; 
+    background-color:rgb(197, 197, 197);
+    font-weight: bold;
+}
+        
+input, select, button { 
+    margin: 5px; 
+    padding: 10px; 
+}
+
+/* h2, h3{
+    font-family: 'IBM Plex Sans', sans-serif;
+} */
+
+.container{
+    color: rgb(0, 0, 0);  
+    /* background-color: #ffec00;   */
+    background-color:rgba(255, 255, 255, 0.51);  
+    padding: 10px;
+    max-width: 550px; 
+    margin: auto; 
+    border: 2px solid #000000; 
+    border-radius: 10px;
+    box-shadow: 5px 5px #000000;
+}
+
+.button{
+    color: #000000;
+    background-color: #ff4910;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    box-shadow: 4px 4px #000000;    
+}
+
+.button:hover{
+    transform: translate(-3px, -3px);
+    box-shadow: 7px 7px 0px black;
+}
+
+.button:focus-within {
+    transform: translate(3px, 3px);
+    box-shadow: 3px 3px 0px black;
+}
+
+.form-container{
+    background: #1bedca;    
+    border: 2px solid black;
+    box-shadow: 4px 4px #000000;    
+    text-align: center;
+    border-radius: 10px;
+    gap: 5px;
+}
+
+.form-container:hover, .form-container:active, .form-container:focus-within{
+    box-shadow: 0px 0px white;
+    border: 2px solid white;
+}
+
+.result-container{
+    display: flex-row;    
+    text-align: left;
+    margin: 10px 60px 10px 60px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 10px;
+}

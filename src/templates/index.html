@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Trigonometri</title> 
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>    
+    <div class="container">
+        <h2>Kalkulator Trigonometri</h2>
+        <form  method="POST">
+            <label>Masukkan Sudut:</label>
+            <input class="form-container" type="number" name="angle" step="any" required value="{{ angle }}">
+            <select class="button" name="unit">
+                <option value="degrees" {% if unit=="degrees" %}selected{% endif %}>Derajat</option>
+                <option value="radians" {% if unit=="radians" %}selected{% endif %}>Radian</option>
+            </select>
+            <button class="button" type="submit">Hitung</button>
+        </form>
+
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+
+        {% if result %}
+            <h3>Hasil:</h3>
+            <div class="result-container">
+                <table>
+                    <tr>
+                        <td>Sin</td>
+                        <td>:</td>
+                        <td>"{{ result["sin"] }}"</td>
+                    </tr>
+                    <tr>  
+                        <td>Cos</td>
+                        <td>:</td>
+                        <td>"{{ result["cos"] }}"</td>                      
+                    </tr>
+                    <tr>  
+                        <td>Tan</td>
+                        <td>:</td>
+                        <td>"{{ result["tan"] }}"</td>                      
+                    </tr>                    
+                    <tr>  
+                        <td>Sinh</td>
+                        <td>:</td>
+                        <td>"{{ result["sinh"] }}"</td>                      
+                    </tr>
+                    <tr>  
+                        <td>Cosh</td>
+                        <td>:</td>
+                        <td>"{{ result["cosh"] }}"</td>                      
+                    </tr>
+                    <tr>  
+                        <td>Tanh</td>
+                        <td>:</td>
+                        <td>"{{ result["tanh"] }}"</td>                      
+                    </tr>
+                    <tr>  
+                        <td>Cosecant</td>
+                        <td>:</td>
+                        <td>"{{ result["csc"] }}"</td>                      
+                    </tr>
+                    <tr>  
+                        <td>Secant</td>
+                        <td>:</td>
+                        <td>"{{ result["sec"] }}"</td>                      
+                    </tr>
+                    <tr>  
+                        <td>Cotangent</td>
+                        <td>:</td>
+                        <td>"{{ result["cot"] }}"</td>                      
+                    </tr>
+                </table>        
+            </div>        
+        {% endif %}
+
+        <!-- <h3>Grafik Gelombang Sinusoidal</h3>
+        <img src="{{ url_for('static', filename='graph.png') }}" alt="Grafik Sinus" style="width: auto;"> -->
+    </div>
+</body>
+</html>
